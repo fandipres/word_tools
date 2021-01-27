@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <title>F2E Team Tools</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/fontawesome.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div id="root">
+        <!-- Load React. -->
+        <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+        <!-- <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+        <script src="  https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script> -->
+        <script src="js/react.development.js"></script>
+        <script src="js/react-dom.development.js"></script>
+        <script src="js/babel.min.js"></script>
+        <!-- Load our React component. -->
+        <script type="text/babel" src="js/index.jsx" crossorigin></script>
+
+        <!-- JQuery -->
+        <script>
+            $(document).ready(function() {
+                $(".nav-stacked .nav-item").bind("click", function(event) {
+                    event.preventDefault();
+                    var clickedItem = $( this );
+                    $(".nav-stacked .nav-item").each(function() {
+                        $(this).removeClass("active");
+                    });
+                    clickedItem.addClass("active");
+                });
+            });
+        </script>
+    </div>
+</body>
+</html>
